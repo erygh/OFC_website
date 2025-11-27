@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Ohio Fresh Cleaning LLC - Commercial Cleaning Services</title>
+  <meta name="description" content="Ohio Fresh Cleaning LLC provides professional commercial cleaning services in Centerville, OH and surrounding areas.">
+  <meta name="keywords" content="commercial cleaning, office cleaning, janitorial services, Centerville OH, Ohio Fresh Cleaning">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Ohio Fresh Cleaning LLC - Commercial Cleaning Services">
+  <meta property="og:description" content="Professional commercial cleaning services in Centerville, OH.">
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  
+  <!-- Styles - Don't edit these directly -->
+  <link rel="stylesheet" href="/src/main.css">
+  
+  <!-- Alpine.js for interactivity -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="flex h-full flex-col bg-white antialiased">
+  
+  <!-- Header Navigation - Mobile-friendly with hamburger menu -->
+  <header class="py-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="relative z-50 flex justify-between" x-data="{ mobileMenuOpen: false }">
+        <div class="flex items-center md:gap-x-12">
+          <!-- Logo - AI: Replace with business logo or name -->
+          <a href="./index.html" aria-label="Home" class="flex items-center">
+            <span class="text-2xl font-bold text-slate-900">Ohio Fresh Cleaning LLC</span>
+          </a>
+          
+          <!-- Desktop Navigation - AI: Add/remove menu items as needed -->
+          <div class="hidden md:flex md:gap-x-6">
+            <a href="./about.html" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">About</a>
+            <a href="./services.html" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Services</a>
+            <a href="./contact.html" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Contact</a>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-x-5 md:gap-x-8">
+          <!-- Call-to-Action Button - AI: Update text and link -->
+          <a href="./contact.html" class="rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700">
+            Get Started
+          </a>
+          
+          <!-- Mobile menu button -->
+          <div class="-mr-1 md:hidden">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="relative z-10 flex h-8 w-8 items-center justify-center">
+              <svg class="h-3.5 w-3.5 overflow-visible stroke-slate-700" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M0 1H14M0 7H14M0 13H14" :class="mobileMenuOpen && 'scale-90 opacity-0'" class="origin-center transition"></path>
+                <path d="M2 2L12 12M12 2L2 12" :class="!mobileMenuOpen && 'scale-90 opacity-0'" class="origin-center transition"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Mobile Navigation - AI: Keep in sync with desktop menu -->
+        <div x-show="mobileMenuOpen" 
+             x-transition:enter="transition ease-out duration-150"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-100"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95"
+             @click.away="mobileMenuOpen = false"
+             class="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 md:hidden">
+          <a href="./about.html" @click="mobileMenuOpen = false" class="block w-full p-2">About</a>
+          <a href="./services.html" @click="mobileMenuOpen = false" class="block w-full p-2">Services</a>
+          <a href="./contact.html" @click="mobileMenuOpen = false" class="block w-full p-2">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="flex-auto">
+    
+    <!-- About Section -->
+    <section class="py-20 sm:py-32">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <h1 class="font-display text-4xl tracking-tight text-slate-900 sm:text-6xl">
+            About Ohio Fresh Cleaning LLC
+          </h1>
+          <p class="mt-6 text-lg tracking-tight text-slate-700">
+            Ohio Fresh Cleaning LLC is a locally owned and operated commercial cleaning company serving Centerville, OH and surrounding areas. We are dedicated to providing our clients with the highest quality cleaning services, tailored to their specific needs. Our owner, Angie Shah, has a passion for creating clean and healthy environments for businesses to thrive in.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-16">
+        <!-- Footer Logo/Name -->
+        <div class="flex justify-center">
+          <a href="./index.html" class="text-slate-900 font-bold text-xl">Ohio Fresh Cleaning LLC</a>
+        </div>
+        <!-- Footer Navigation - AI: Keep simple -->
+        <nav class="mt-10 text-sm" aria-label="Footer navigation">
+          <div class="-my-1 flex justify-center gap-x-6">
+            <a href="./about.html" class="rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">About</a>
+            <a href="./services.html" class="rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Services</a>
+            <a href="./contact.html" class="rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Contact</a>
+          </div>
+        </nav>
+      </div>
+      <div class="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
+        <p class="mt-6 text-sm text-slate-500 sm:mt-0">
+          Copyright &copy; <span x-text="new Date().getFullYear()"></span> Ohio Fresh Cleaning LLC. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
